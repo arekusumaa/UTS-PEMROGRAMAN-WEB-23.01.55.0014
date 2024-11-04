@@ -42,7 +42,7 @@ Untuk mengakses halaman produk secara dinamis (misalnya detail.html?id=glow-seru
 Jika menggunakan VS Code, bisa gunakan ekstensi Live Server dengan mengklik kanan file index.html dan pilih "Open with Live Server".
 Alternatif lainnya adalah menggunakan XAMPP atau WAMP:
 Pindahkan folder proyek ke dalam folder htdocs (untuk XAMPP) atau www (untuk WAMP).
-Akses website di browser dengan membuka http://localhost/Produk_Skincare/index.html.
+Akses website di browser dengan membuka http://localhost/Produk_Skincare/
 
 3. Navigasi Situs:
 Buka index.html untuk mengakses halaman utama.
@@ -51,13 +51,13 @@ Gunakan menu navigasi untuk mengakses halaman Contact atau kembali ke Home.
 
 4. Buka di Server Lokal:
 Gunakan Live Server di VS Code atau letakkan folder proyek di htdocs (jika pakai XAMPP).
-Akses pemesanan.html melalui http://localhost/Produk_Skincare/pemesanan.html.
+Akses pemesanan.html melalui http://localhost/Produk_Skincare/
 Isi Formulir:
 Masukkan data pemesanan seperti nama, email, alamat, dan metode pembayaran.
 Klik "Proses Order" untuk melanjutkan.
 
 5. Buka di Server Lokal:
-Jalankan Live Server di VS Code atau buka http://localhost/ProdukSkincare/order.html di browser.
+Jalankan Live Server di VS Code atau buka http://localhost/Produk_Skincare/ di browser.
 Cek Rincian Pesanan:
 Periksa detail pesanan dan statusnya jika ada, untuk memastikan informasi pesanan lengkap.
 
