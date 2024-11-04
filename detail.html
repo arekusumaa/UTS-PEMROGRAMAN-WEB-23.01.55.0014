@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Detail Produk</h1>
+    </header>
+
+    <section id="product-details">
+        <div id="product-content"></div>
+        <img id="product-details"  width="200">
+    </section>
+
+    <script>
+        // Ambil parameter ID dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        console.log("Product ID:", productId); // Log ID produk untuk debugging
+
+        // Data produk berdasarkan ID
+        const products = {
+            "glow-serum": {
+                name: "Glow Serum",
+                image: "img/glow_serum.jpeg",
+                price: "$20",
+                description: "Serum wajah yang memberikan kilau alami pada kulit.",
+                specs: "30ml, cocok untuk semua jenis kulit."
+            },
+            "hydrating-mist": {
+                name: "Hydrating Mist",
+                image: "img/hydrating_mist.jpeg",
+                price: "$15",
+                description: "Mist yang memberikan kelembapan instan.",
+                specs: "100ml, mengandung aloe vera."
+            },
+            "brightening-cream": {
+                name: "Brightening Cream",
+                image: "img/brightening_cream.jpg",
+                price: "$25",
+                description: "Krim pencerah untuk kulit yang tampak lebih cerah.",
+                specs: "50g, mengandung vitamin C."
+            },
+            "night-repair-oil": {
+                name: "Night Repair Oil",
+                image: "img/night_repail_oil.jpg",
+                price: "$30",
+                description: "Minyak malam yang memperbaiki kulit saat tidur.",
+                specs: "30ml, anti-aging formula."
+            },
+            "soothing-gel": {
+                name: "Soothing Gel",
+                image: "img/soothing_gel.jpeg",
+                price: "$18",
+                description: "Gel menenangkan untuk kulit iritasi.",
+                specs: "50g, mengandung aloe vera."
+            },
+            "exfoliating-scrub": {
+                name: "Exfoliating Scrub",
+                image: "img/exfoliating_scrub.jpeg",
+                price: "$20",
+                description: "Scrub yang membantu mengangkat sel kulit mati.",
+                specs: "60g, microbead technology."
+            },
+            "anti-aging-serum": {
+                name: "Anti-Aging Serum",
+                image: "img/anti_aging_serum.jpg",
+                price: "$35",
+                description: "Serum yang mengurangi tanda-tanda penuaan.",
+                specs: "30ml, mengandung retinol."
+            },
+            "sunscreen-spf50": {
+                name: "Sunscreen SPF50",
+                image: "img/sunscreen.jpeg",
+                price: "$22",
+                description: "Sunscreen dengan perlindungan tinggi dari sinar UV.",
+                specs: "50ml, SPF 50 PA+++."
+            },
+            "eye-cream": {
+                name: "Eye Cream",
+                image: "img/eye_cream.jpeg",
+                price: "$28",
+                description: "Krim untuk mengurangi lingkaran hitam di area mata.",
+                specs: "15ml, cocok untuk kulit sensitif."
+            },
+            "lip-balm": {
+                name: "Lip Balm",
+                image: "img/lip_balm.jpg",
+                price: "$8",
+                description: "Pelembap bibir yang tahan lama.",
+                specs: "5g, mengandung shea butter."
+            }
+
+            // Tambahkan data produk lain di sini sesuai kebutuhan
+        };
+
+         // Tampilkan produk yang sesuai dengan ID
+    if (productId && products[productId]) {
+        const product = products[productId];
+        document.getElementById("product-content").innerHTML = `
+            <h2>${product.name}</h2>
+            <img src="${product.image}" alt="${product.name}">
+            <p><strong>Harga:</strong> ${product.price}</p>
+            <p><strong>Deskripsi:</strong> ${product.description}</p>
+            <p><strong>Spesifikasi:</strong> ${product.specs}</p>
+        `;
+    } else {
+        document.getElementById("product-content").innerHTML = "<p>Produk tidak ditemukan.</p>";
+    }
+</script>
+</body>
+</html>
